@@ -1000,6 +1000,20 @@ for 属性规定 label 与哪个表单元素绑定。
 <input type="radio" name="sex" id="male" value="male">
 ```
 
+练习
+
+```html
+<label>用户名: <input type="text"></label>
+<hr>
+<label for="pwd">
+    11222223444
+</label>
+用户名：<input type="text">
+密码：<input type="password" id="pwd">
+```
+
+
+
 ### textarea控件(文本域)
 
 如果需要输入大量的信息，就需要用到&lt;textarea&gt;&lt;/textarea&gt;标签。通过textarea控件可以轻松地创建多行文本输入框，其基本语法格式如下：
@@ -1008,6 +1022,10 @@ for 属性规定 label 与哪个表单元素绑定。
 <textarea cols="每行中的字符数" rows="显示的行数">
   文本内容
 </textarea>
+<!-- 
+	cols="每行中的字符数" rows="显示的行数" 几乎不用
+	一般都是用css来写
+-->
 ```
 
 <img src="media/textarea.png" />
@@ -1028,7 +1046,7 @@ for 属性规定 label 与哪个表单元素绑定。
 注意：
 
 1. &lt;select&gt;</select&gt;中至少应包含一对&lt;option></option&gt;。
-2. 在option 中定义selected =" selected "时，当前项即为默认选中项。
+2. 在option 中定义selected =" selected "时，当前项即为**默认选中项**。
 
 ### 表单域
 
