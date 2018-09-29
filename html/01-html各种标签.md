@@ -1050,6 +1050,8 @@ for 属性规定 label 与哪个表单元素绑定。
 
 ### 表单域
 
+不同的表单有不同的表单域
+
 在HTML中，form标签被用于定义表单域，即创建一个表单，以实现用户信息的收集和传递，form中的所有内容都会被提交给服务器。创建表单的基本语法格式如下：
 
 ```html
@@ -1062,12 +1064,31 @@ for 属性规定 label 与哪个表单元素绑定。
 
 1. Action
    在表单收集到信息后，需要将信息传递给服务器进行处理，action属性用于指定接收并处理表单数据的服务器程序的url地址。
+
 2. method
    用于设置表单数据的提交方式，其取值为get或post。
+
+   如果用get的话会在提交以后在网址上显示出用户写的信息；
+
 3. name
    用于指定表单的名称，以区分同一个页面中的多个表单。
 
 注意：  每个表单都应该有自己表单域。
+
+练习
+
+```html
+<form action="" method="post">
+	用户名：<input type="text" name="yonghuming" value="用户名" > <br/> <br>
+    密  码: <input type="password" name="mimal"> <br> <br>
+    密  码：<input type="password" name="mima2"> <br><br>
+    性  别：<input type="radio" name="sex">
+    <input type="submit" value="提交所填">
+    <input type="reset" value="重置">
+</form>
+```
+
+
 
 ## 查文档
 
