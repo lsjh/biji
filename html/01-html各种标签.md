@@ -849,7 +849,7 @@ caption 标签必须紧随 table 标签之后。您只能对每个表格定义�
 
 <img src="media/car.jpg"  width="500" />
 
-目的是为了收集用户信息。
+目的是为了**收集用户信息**。
 
 在我们网页中， 我们也需要跟用户进行交互，收集用户资料，此时也需要表单。
 
@@ -874,6 +874,114 @@ caption 标签必须紧随 table 标签之后。您只能对每个表格定义�
 在上面的语法中，&lt;input /&gt;标签为单标签，type属性为其最基本的属性，其取值有多种，用于指定不同的控件类型。除了type属性之外，&lt;input /&gt;标签还可以定义很多其他的属性，其常用属性如下表所示。
 
 <img src="media/input.png" />
+
+**单选框** :多个里面选一个,如果是一组，还要写相同的名字（name），默认选择一个的话要加checked="checked" ；
+
+**重置**：清空
+
+练习
+
+```html
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <caption>
+            <h4 style="color:pink;font-size:25px">青春不常在，抓紧谈恋爱</h4>
+        </caption>
+        <tbody>
+            <tr height="60">
+                <td>所在地区</td>
+                <td>
+                    <input type="text" value="北京" style="color:#ccc">
+                </td>
+            </tr>
+            <tr height="60">
+                <td>用户名</td>
+                <td>
+                    <input type="text" value="andy">
+                </td>
+            </tr>
+            <tr height="60">
+                <td>密码</td>
+                <td>
+                    <input type="password" value="110120" maxlangth="6" id="suibian">
+                </td>
+            </tr>
+            <!-- 以下是年龄 -->
+            <tr height="60">
+                <td>年龄</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">选择年份</option>
+                        <option value="">1990</option>
+                        <option value="">1991</option>
+                        <option value="">1992</option>
+                        <option value="">1993</option>
+                        <option value="">1994</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">选择月份</option>  <!-- option选项 -->
+                        <option value="">1月份</option>  <!-- option选项 -->
+                        <option value="">2月份</option>  <!-- option选项 -->
+                        <option value="">3月份</option>  <!-- option选项 -->
+                        <option value="">4月份</option>  <!-- option选项 -->
+                        <option value="">5月份</option>  <!-- option选项 -->
+				   </select>
+                </td>
+            </tr>
+            <!-- 以下是籍贯 -->
+            <tr height="60">
+                <td>籍贯</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">籍贯</option>  <!-- option选项 -->
+                        <option value="" selected="selected">北京</option>  <!-- option选项 -->
+                        <option value="">哈尔滨</option>  <!-- option选项 -->
+                        <option value="">青岛</option>  <!-- option选项 -->
+                        <option value="">大连</option>  <!-- option选项 -->
+				   </select>
+                </td>
+            </tr>
+            <tr height="60">
+                <td>性别</td>
+                <td style="color:blue;">
+                    男 <input type="radio" name="sex" />
+                    女 <input type="radio" checked="checked" name="sex" />
+                </td>
+            </tr>
+            <tr>
+                <td>喜欢的类型</td>
+                <td>
+                     妩媚 <input type="checkbox" name="love">
+                    气质    <input type="checkbox" name="love">
+                    小鲜肉   <input type="checkbox" name="love">
+                    鹿晗  <input type="checkbox" name="love" checked="checked" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="注册">
+                    <input type="submit" value="提交">
+                    <input type="reset" value="重置">
+                    <input type="image" src="btn.png" />
+			    </td>
+            </tr>
+            <tr>
+			<td>上传头像</td>
+                <td>
+                    <input type="file" > 
+                </td>
+            </tr>
+            <tr>
+                <td>给我留言</td>
+                <td>
+                    <textarea name="" id="" cols="50" rows="10" style="color: #ccc;">不支持富文本
+                    </textarea>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+```
 
 
 
