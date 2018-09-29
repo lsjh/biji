@@ -589,7 +589,7 @@ base 写到  <head>  </head>  之间
 
 ## 表格 table(会使用)
 
-存在即是合理的。  表格的现在还是较为常用的一种标签，但不是用来布局，常见处理、显示表格式数据。
+存在即是合理的。  表格的现在还是较为常用的一种标签，但不是用来布局，常见**处理、显示表格式数据**。
 
 <img src="media/table.png" />
 
@@ -623,8 +623,8 @@ ps:  这些地方用表格，你会觉得生活还是那么美好。。。。忍
 1. <tr></tr>中只能嵌套<td></td>
 ```
 
-```
-
+```html
+2. <td></td>标签，他就像一个容器，可以容纳所有的元素
 ```
 
 
@@ -633,7 +633,9 @@ ps:  这些地方用表格，你会觉得生活还是那么美好。。。。忍
 
 <img src="media/tt.png" />
 
+**做表格的时候一般，border,cellspacing,cellpadding为0；**
 
+align可以给tr加
 
 ### 表头标签
 
@@ -641,9 +643,19 @@ ps:  这些地方用表格，你会觉得生活还是那么美好。。。。忍
 
 <img src="media/th.png" />
 
+```html
+<thead>
+	<tr>
+		<th></th>
+	</tr>
+</thead>
+```
+
+
+
 ### 表格结构（了解）
 
-```
+```html
 在使用表格进行布局时，可以将表格划分为头部、主体和页脚（页脚因为有兼容性问题，我们不在赘述），具体 如下所示：
 
 <thead></thead>：用于定义表格的头部。
@@ -654,6 +666,23 @@ ps:  这些地方用表格，你会觉得生活还是那么美好。。。。忍
 <tbody></tbody>：用于定义表格的主体。
 
 位于<table></table>标签中，一般包含网页中除头部和底部之外的其他内容。
+
+
+<!-- 基本格式 -->
+<table>
+    <thead border="0" cellspacing="0" cellpadding="0">
+    	<tr>
+        	<th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    	<tr>
+        	<td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 ```
 
 <img src="media/thead.png" />
@@ -674,17 +703,134 @@ caption 元素定义表格标题。
 
 caption 标签必须紧随 table 标签之后。您只能对每个表格定义一个标题。通常这个标题会被居中于表格之上。
 
+### 表格结构练习
+
+```html
+<table border="1" cellpadding="0" cellspacing="0" width="550" align="center">
+    <!-- 表格标题 -->
+    <caption>
+    	<h3>
+            小说排行榜
+        </h3>
+    </caption>
+    <!-- 表格标题 -->
+    <thead>
+    	<tr>
+        	<th>排名</th>
+            <th>关键词</th>
+            <th>趋势</th>
+            <th>今日搜索</th>
+            <th>最近七日</th>
+            <th>相关连接</th>
+        </tr>
+    </thead>
+    <!-- 表格主体 -->
+    <tbody>
+    	<tr>
+        	<td>1</td>
+            <td>鬼吹灯</td>
+            <td>
+            	<img src="media/down.jpg" />
+            </td>
+            <td>321</td>
+            <td>112</td>
+            <td>
+            	 <a href="#">贴吧</a>
+				<a href="#">图片</a>
+				<a href="#">百科</a>
+            </td>
+        </tr>
+        <tr>
+        	<td>1</td>
+            <td>鬼吹灯</td>
+            <td>
+            	<img src="media/down.jpg" />
+            </td>
+            <td>321</td>
+            <td>112</td>
+            <td>
+            	 <a href="#">贴吧</a>
+				<a href="#">图片</a>
+				<a href="#">百科</a>
+            </td>
+        </tr>
+        <tr>
+        	<td>1</td>
+            <td>鬼吹灯</td>
+            <td>
+            	<img src="media/down.jpg" />
+            </td>
+            <td>321</td>
+            <td>112</td>
+            <td>
+            	 <a href="#">贴吧</a>
+				<a href="#">图片</a>
+				<a href="#">百科</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+
 ### 合并单元格(难点)
 
 跨行合并：rowspan    跨列合并：colspan
 
 合并单元格的思想：
 
+先确定跨行还是跨列
+
 ​     将多个内容合并的时候，就会有多余的东西，把它删除。    例如 把 3个 td 合并成一个， 那就多余了2个，需要删除。
 
 ​     公式：  删除的个数  =  合并的个数  - 1   
 
    合并的顺序 先上   先左 
+
+```html
+<!-- 跨列 -->
+<table width="400" height="100" border="1">
+    <tbody>
+		<tr>
+			<td>123</td>
+			<td>abc</td>
+			<td>abc</td>
+		</tr>
+		<tr>
+			<td colspan="2">123</td>
+			
+			<td>测试</td>
+		</tr>
+		<tr>
+			<td>123</td>
+			<td>abc</td>
+			<td>abc</td>
+		</tr>
+    </tbody>
+</table>
+```
+
+```html
+<!-- 跨行 -->
+<table width="400" height="100" border="1">
+    <tbody>
+		<tr>
+			<td>123</td>
+			<td>abc</td>
+			<td rowspan="3">abc</td>
+		</tr>
+		<tr>
+			<td>123</td>
+			<td>123</td>
+			
+		</tr>
+		<tr>
+			<td>123</td>
+			<td>abc</td>
+		
+		</tr>
+    </tbody>
+</table>
+```
 
 ### 总结表格
 
@@ -694,6 +840,8 @@ caption 标签必须紧随 table 标签之后。您只能对每个表格定义�
 4. 表格不要纠结于外观，那是CSS 的作用。
 
 **表格的学习要求：  能手写表格结构，并且能合并单元格。**
+
+
 
 ## 表单标签(掌握)
 
