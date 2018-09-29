@@ -211,3 +211,25 @@ rel：定义当前文档与被链接文档之间的关系，在这里需要指�
     </body>
 ```
 
+## 多类名选择器
+
+我们可以给标签指定多个类名，从而达到更多的选择目的。
+
+<img src="image/lei.png"/>
+
+注意：
+
+```
+1. 样式显示效果跟HTML元素中的类名先后顺序没有关系,受CSS样式书写的上下顺序有关。
+2. 各个类名中间用空格隔开。
+```
+
+多类名选择器在后期布局比较复杂的情况下，还是较多使用的。
+
+```html
+<div class="pink fontWeight font20">亚瑟</div>
+<div class="font20">刘备</div>
+<div class="font14 pink">安其拉</div>
+<div class="font14">貂蝉</div>
+```
+
