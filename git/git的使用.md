@@ -273,3 +273,9 @@ $ git push -u origin master
 <img src="image/5.png"/>
 
 刷新github，即可看到上传的文件夹。
+
+#### 克隆
+
+git clone git@github.com:你的名字/gitskills.git
+
+<img src="image/6.png"/>
