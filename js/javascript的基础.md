@@ -260,6 +260,10 @@ es6
 
 定义变量的时候，把变量名都统一放在前面一起
 
+### let 和var 的区别
+
+同一个作用域下,let的变量名不能相同，var 可以重复
+
 ### 变量名的命名规则和规范
 
 - 规则-必须遵守的，不遵守会报错
@@ -478,6 +482,10 @@ NaN
 1. undefined表示一个声明了没有赋值的变量，变量只声明的时候值默认是undefined
 2. null表示一个空，变量的值如果想为null，必须手动设置
 
+#### symbol(es6新增)
+
+独一无二的，当给一个对象添加属性时，不确定前面有没有，就用symbol.
+
 ### 复杂数据类型
 
 Object
@@ -552,6 +560,81 @@ num  +  ""，当 + 两边一个操作符是字符串类型，一个操作符是�
 Boolean()
 
 0  ''(空字符串) null undefined NaN 会转换成false  其它都会转换成true
+
+## 操作各种样式
+
+在网页里控制标签样式的就是css
+
+### 内部样式表
+
+```html
+<style id="css"></style>
+<div id="wrap"></div>
+<script>
+	let oCss=document.getElementById("css");
+	oCss.innerHTML="#wrap{width:100px;height:100px;background:pink;}"
+</script>
+```
+
+### 行内样式(常用)
+
+- 操作元素的标签属性 
+
+  1. 合法的标签属性，直接.操作
+
+     合法指的是符合w3c规范的
+     class比较特殊，需要使用className代替操作
+     style这个属性比较特殊，一个节点对象的style属性存的是这个节点所有行内样式的对象
+
+```html
+<div style="" id="wrap" class="box" title="我是一个div">
+    313
+</div>
+<script>
+    let oDiv=document.getElementById("wrap");
+    /* 写 */
+    oDiv.title="狗蛋";
+    /* 读 */
+    alert(oDiv.title);
+    
+    
+    
+    /*操作style*/
+    oDiv.style="height:300px;"
+    //这样会覆盖原先的样式，还不能用+=
+    oDiv.style.width="200px";
+   	oDiv.style.cssText="width:100px;height:100px;";
+    //cssText是style引号里面的内容，可以使用+=
+</script>
+```
+
+获取的数据类型是字符串
+
+```html
+<script>
+	
+</script>
+```
+
+2.不合法的标签属性
+
+getAttribute()   拿    
+
+setAttribute()    设置
+
+removeAttribute()  移除
+
+这几个还可以操作合法的标签属性,但是一般不会用，直接.就可以,移除的时候可以用
+
+```html
+<div id="wrap"></div>
+<script>
+	let oWrap=document.getElementById("wrap");
+    oWrap.setAttribute("abc","123");
+    oWrap.getAttribute("abc");
+    oWrap.removeAttribute("abc");
+</script>
+```
 
 ## 操作符
 
