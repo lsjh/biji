@@ -50,9 +50,9 @@ https://blockly.uieee.com/
 
 
 
-![1497317567484](E:/aaaa/biji/js/media/1497317567484.png)
+<img src="media/1497317567484.png" />
 
-![1496916239525](E:/aaaa/biji/js/media/1496916239525.png)
+<img src="media/1496916239525.png" />
 
 ## 服务器端与客户端编程
 
