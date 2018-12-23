@@ -72,7 +72,7 @@ Gecko(Firefox 内核)： Mozilla FireFox(火狐浏览器) 采用该内核，Geck
 
    在 Chromium 项目中研发 Blink 渲染引擎（即浏览器核心），内置于 Chrome 浏览器之中。Blink 其实是 WebKit 的分支。 
 
-​     大部分国产浏览器最新版都采用Blink内核。二次开发
+     大部分国产浏览器最新版都采用Blink内核。二次开发
 
 （5） Presto(Opera) 
 
@@ -624,7 +624,7 @@ ps:  这些地方用表格，你会觉得生活还是那么美好。。。。忍
 
 ### 表格属性
 
-<img src="E:/aaaa/biji/html/media/tt.png" />
+<img src="media/tt.png" />
 
 **做表格的时候一般，border,cellspacing,cellpadding为0；**
 
@@ -723,9 +723,9 @@ caption 标签必须紧随 table 标签之后。您只能对每个表格定义�
 
 先确定跨行还是跨列
 
-​     将多个内容合并的时候，就会有多余的东西，把它删除。    例如 把 3个 td 合并成一个， 那就多余了2个，需要删除。
+     将多个内容合并的时候，就会有多余的东西，把它删除。    例如 把 3个 td 合并成一个， 那就多余了2个，需要删除。
 
-​     公式：  删除的个数  =  合并的个数  - 1   
+     公式：  删除的个数  =  合并的个数  - 1   
 
    合并的顺序 先上   先左 
 
@@ -798,7 +798,7 @@ caption 标签必须紧随 table 标签之后。您只能对每个表格定义�
 
 表单控件：
 
-​       包含了具体的表单功能项，如单行文本输入框、密码输入框、复选框、提交按钮、重置按钮等。
+       包含了具体的表单功能项，如单行文本输入框、密码输入框、复选框、提交按钮、重置按钮等。
 
   提示信息：
 
@@ -1045,9 +1045,9 @@ MDN: https://developer.mozilla.org/zh-CN/
 
 # 路径(重点、难点)
 
-<img src="E:/aaaa/biji/html/media/dt.png" width="400" />
+<img src="media/dt.png" width="400" />
 
-<img src="E:/aaaa/biji/html/media/lj.png" />
+<img src="/media/lj.png" />
 
 实际工作中，通常新建一个文件夹专门用于存放图像文件，这时再插入图像，就需要采用“路径”的方式来指定图像文件的位置。
 
